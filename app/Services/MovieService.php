@@ -35,4 +35,30 @@ class MovieService
                 ];
             });
     }
+
+    public static function formatMovie($movie): array
+    {
+        return [
+            'poster_path' => $movie['poster_path']
+                ? 'https://image.tmdb.org/t/p/w500/' . $movie['poster_path']
+                : 'https://via.placeholder.com/500x750',
+            'id' => $movie,
+            'genres' => collect($movie['genres'])->pluck('name')->flatten()->implode(', '),
+            'title' => $movie['title'],
+            'vote_average' => $movie['vote_average'] * 10 . '%',
+            'overview' => $movie['overview'],
+            'release_date' => Carbon::parse($movie['release_date'])->format('M d, Y'),
+            'credits' => $movie['credits'],
+            'videos' => $movie['videos'],
+            'images' => collect($movie['images']['backdrops'])->sortByDesc('vote_average')->take(9)->values(),
+            'crew' => collect($movie['credits']['crew'])->take(2),
+            'cast' => collect($movie['credits']['cast'])->sortBy('order')->take(5)->values()->map(function ($cast) {
+                return collect($cast)->merge([
+                    'profile_path' => $cast['profile_path']
+                        ? 'https://image.tmdb.org/t/p/w300' . $cast['profile_path']
+                        : 'https://via.placeholder.com/300x450',
+                ]);
+            }),
+        ];
+    }
 }

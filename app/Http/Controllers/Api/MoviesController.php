@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Actions\FetchMovieAction;
 use App\Actions\FetchMoviesAction;
 use App\Http\Controllers\Controller;
 use App\Services\MovieService;
 
 class MoviesController extends Controller
 {
-    public function __invoke(): array
+    public function index(): array
     {
         $movies = FetchMoviesAction::execute();
 
@@ -19,5 +20,11 @@ class MoviesController extends Controller
             'popularMovies' => $popularMovies,
             'nowPlayingMovies' => $nowPlayingMovies,
         ];
+    }
+
+    public function show($id): array
+    {
+        return MovieService::formatMovie(FetchMovieAction::execute($id));
+
     }
 }

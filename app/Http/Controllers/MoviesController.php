@@ -13,8 +13,8 @@ class MoviesController extends Controller
         return Inertia::render('Movies/index');
     }
 
-    public function show($id)
+    public function show($id): Response
     {
-        //
+        return Inertia::render('Movies/show', ['id' => $id]);
     }
 }

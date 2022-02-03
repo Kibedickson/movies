@@ -8,4 +8,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('movies', MoviesController::class);
+Route::resource('movies', MoviesController::class)->only('index', 'show');
