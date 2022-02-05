@@ -148,9 +148,10 @@
 </template>
 
 <script>
-import {defineComponent, onMounted, ref} from 'vue'
-import AppLayout from '@/Pages/App'
-import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import {defineAsyncComponent, defineComponent, onMounted, ref} from 'vue'
+
+const AppLayout = defineAsyncComponent(() => import('@/Pages/App'))
+const PulseLoader = defineAsyncComponent(() => import('vue-spinner/src/PulseLoader.vue'))
 
 export default defineComponent({
   props: {

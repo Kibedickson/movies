@@ -5,8 +5,8 @@
     </main>
 </template>
 <script>
-import Nav from '../Components/Nav.vue'
-import { defineComponent } from 'vue'
+import { defineComponent, defineAsyncComponent } from 'vue'
+const Nav = defineAsyncComponent(() => import("@/Components/Nav"))
 
 export default defineComponent({
     components: {
