@@ -9,6 +9,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('movies', MoviesController::class)->only('index', 'show');
+Route::get('movies', [MoviesController::class, 'index']);
+Route::get('movies/{id}', [MoviesController::class, 'show']);
 
 Route::post('search', SearchController::class);
