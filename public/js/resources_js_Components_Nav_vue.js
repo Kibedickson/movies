@@ -142,9 +142,25 @@ var _hoisted_7 = {
 };
 var _hoisted_8 = ["href"];
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"md:ml-6 mt-3 md:mt-0\"><a href=\"#\" class=\"hover:text-gray-300\">TV Shows</a></li><li class=\"md:ml-6 mt-3 md:mt-0\"><a href=\"#\" class=\"hover:text-gray-300\">Actors</a></li><li class=\"md:ml-6 mt-3 md:mt-0\"><a href=\"#\" class=\"hover:text-gray-300\">Test</a></li>", 3);
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "md:ml-6 mt-3 md:mt-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "#",
+  "class": "hover:text-gray-300"
+}, "TV Shows")], -1
+/* HOISTED */
+);
 
-var _hoisted_12 = {
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+  "class": "md:ml-6 mt-3 md:mt-0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "#",
+  "class": "hover:text-gray-300"
+}, "Actors")], -1
+/* HOISTED */
+);
+
+var _hoisted_11 = {
   "class": "flex flex-col md:flex-row items-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -159,7 +175,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "hover:text-gray-300"
   }, "Movies", 8
   /* PROPS */
-  , _hoisted_8)]), _hoisted_9]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search)])])]);
+  , _hoisted_8)]), _hoisted_9, _hoisted_10]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search)])])]);
 }
 
 /***/ }),

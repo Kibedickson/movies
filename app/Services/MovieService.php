@@ -15,8 +15,8 @@ class MovieService
 
     public static function formatMovies($movies, $genres): Collection
     {
+
         return collect($movies)
-            ->sortByDesc('vote_average')
             ->take(10)
             ->values()
             ->map(function ($movie) use ($genres) {
