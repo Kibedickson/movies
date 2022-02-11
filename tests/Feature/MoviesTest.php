@@ -48,17 +48,13 @@ test('movie page shows correct info', function () {
 
     $response = $this->getJson('/api/movies/*');
     $response->assertSuccessful();
-    $response->assertJson([
-        'id' => 1,
-        'title' => 'Movie 1',
-        'poster_path' => 'path/to/poster',
-        'overview' => 'Movie 1 overview',
-        'release_date' => '2020-01-01',
-        'vote_average' => 6,
-    ]);
+    expect($response['genres'])->toBe("Action, Adventure");
+    expect($response['title'])->toBe("Movie 1");
+    expect($response['poster_path'])->toBe("https://image.tmdb.org/t/p/w500/path/to/poster");
+    expect($response['vote_average'])->toBe("60%");
 });
 
-function fakePopularMovies()
+function fakePopularMovies(): \GuzzleHttp\Promise\PromiseInterface
 {
     return Http::response([
         'results' => [
@@ -75,7 +71,7 @@ function fakePopularMovies()
     ], 200);
 }
 
-function fakeNowPlayingMovies()
+function fakeNowPlayingMovies(): \GuzzleHttp\Promise\PromiseInterface
 {
     return Http::response([
         'results' => [
@@ -86,23 +82,13 @@ function fakeNowPlayingMovies()
                 'overview' => 'Now Playing Movie 1 overview',
                 'release_date' => '2020-01-01',
                 'vote_average' => 6,
-                'genre_ids' => [12, 28],
-                'credits' => [
-                    'cast' => [],
-                    'crew' => [],
-                ],
-                'videos' => [],
-                'images' => [
-                    'backdrops' => [],
-                ],
-                'crew' => [],
-                'cast' => [],
+                'genre_ids' => [12, 28]
             ],
         ],
     ], 200);
 }
 
-function fakeSingleMovie()
+function fakeSingleMovie(): \GuzzleHttp\Promise\PromiseInterface
 {
     return Http::response([
         'id' => 1,
@@ -114,13 +100,21 @@ function fakeSingleMovie()
         "genres" => [
             ["id" => 28, "name" => "Action"],
             ["id" => 12, "name" => "Adventure"],
-            ["id" => 35, "name" => "Comedy"],
-            ["id" => 14, "name" => "Fantasy"],
         ],
+        'credits' => [
+            'cast' => [],
+            'crew' => [],
+        ],
+        'videos' => [],
+        'images' => [
+            'backdrops' => [],
+        ],
+        'crew' => [],
+        'cast' => [],
     ], 200);
 }
 
-function fakeGenres()
+function fakeGenres(): \GuzzleHttp\Promise\PromiseInterface
 {
     return Http::response([
         'genres' => [
