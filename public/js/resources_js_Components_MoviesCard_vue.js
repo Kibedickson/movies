@@ -114,13 +114,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _MoviesCard_vue_vue_type_template_id_389a97fe__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MoviesCard.vue?vue&type=template&id=389a97fe */ "./resources/js/Components/MoviesCard.vue?vue&type=template&id=389a97fe");
 /* harmony import */ var _MoviesCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MoviesCard.vue?vue&type=script&lang=js */ "./resources/js/Components/MoviesCard.vue?vue&type=script&lang=js");
-/* harmony import */ var _home_dickson_Personal_Projects_movies_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _home_dickson_Personal_Projects_movies_laravel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_home_dickson_Personal_Projects_movies_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_MoviesCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_MoviesCard_vue_vue_type_template_id_389a97fe__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/MoviesCard.vue"]])
+const __exports__ = /*#__PURE__*/(0,_home_dickson_Personal_Projects_movies_laravel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_MoviesCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_MoviesCard_vue_vue_type_template_id_389a97fe__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/MoviesCard.vue"]])
 /* hot reload */
 if (false) {}
 
