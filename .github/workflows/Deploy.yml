@@ -36,5 +36,5 @@ jobs:
           key: ${{ secrets.AZURE_SERVER_KEY }}
           script: |
             cd ${{ secrets.AZURE_SERVER_APP_PATH }}
-            chmod +x ./server_deploy.sh
-            ./server_deploy.sh
+            chmod +x ./server-deploy.sh
+            ./server-deploy.sh
