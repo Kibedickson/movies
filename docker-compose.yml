@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  movies_laravel_php:
+  php:
     build:
       args:
         user: ubuntu
@@ -9,13 +9,15 @@ services:
       context: ./
       dockerfile: Dockerfile
     restart: unless-stopped
+    container_name: movies_laravel_php
     working_dir: /var/www/
     volumes:
       - ./:/var/www
       - ./docker-compose/php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:rw,delegated
 
-  movies_laravel_nginx:
+  nginx:
     image: nginx:1.17-alpine
+    container_name: movies_laravel_nginx
     restart: unless-stopped
     expose:
       - 80
