@@ -1,17 +1,17 @@
 #!/bin/sh
 set -e
 
+git push
+
+git checkout production
+git merge main
+
 #npm build for production
 npm run prod
 
 git add .
 
 git commit -m "Build for Prod"
-
-git push
-
-git checkout production
-git merge main
 
 git push origin production
 
