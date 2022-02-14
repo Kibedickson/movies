@@ -1,5 +1,6 @@
 <template>
     <Nav></Nav>
+
     <main>
         <slot></slot>
     </main>
