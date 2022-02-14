@@ -8,10 +8,10 @@ class FetchMovieAction
 {
     public static function execute($id)
     {
-        $movie =  Http::withToken(config('services.tmdb.token'))
-            ->get('https://api.themoviedb.org/3/movie/' . $id . '?append_to_response=credits,videos,images')
+        $tvshow = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/tv/'.$id.'?append_to_response=credits,videos,images')
             ->json();
 
-        return collect($movie);
+        return collect($tvshow);
     }
 }

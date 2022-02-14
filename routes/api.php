@@ -2,14 +2,13 @@
 
 use App\Http\Controllers\Api\MoviesController;
 use App\Http\Controllers\Api\SearchController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\TvController;
 use Illuminate\Support\Facades\Route;
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 Route::get('movies', [MoviesController::class, 'index']);
 Route::get('movies/{id}', [MoviesController::class, 'show']);
+
+Route::get('tvs', [TvController::class, 'index']);
+Route::get('tvs/{id}', [TvController::class, 'show']);
 
 Route::post('search', SearchController::class);
