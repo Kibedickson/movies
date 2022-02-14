@@ -30,9 +30,16 @@ class SearchController extends Controller
                 ->json()['results'];
         }
 
-        $results = array_merge($moviesResults, $tvResults);
+        $results = collect($moviesResults)->sortByDesc('popularity')
+            ->values()
+            ->take(3)
+            ->merge(collect($tvResults)
+                ->sortByDesc('popularity')
+                ->values()
+                ->take(3)
+            );
 
-        return collect($results)->take(5);
+        return $results;
 
     }
 }
