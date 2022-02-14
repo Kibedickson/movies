@@ -9,7 +9,8 @@ docker-compose exec --tty app php artisan down --message 'The app is being (quic
 
 echo "Git Pull"
 # update Codebase
-git pull
+git fetch origin production
+git reset --hard origin/production
 
 echo "docker-compose up -d --build"
 docker-compose up -d --build
