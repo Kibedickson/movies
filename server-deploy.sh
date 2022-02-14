@@ -7,7 +7,7 @@ echo " Deploying Application... "
 echo "docker-compose exec app php artisan down"
 docker-compose exec --tty app php artisan down --message 'The app is being (quickly!) updated. Please try again in a minute.' || true
 # update Codebase
-git fetch origin production
+git pull origin production
 
 echo "docker-compose up -d --build"
 docker-compose up -d --build
