@@ -6,8 +6,10 @@ echo " Deploying Application... "
 # Enter Maintenance Mode
 echo "docker-compose exec app php artisan down"
 docker-compose exec --tty app php artisan down --message 'The app is being (quickly!) updated. Please try again in a minute.' || true
+
+echo "Git Pull"
 # update Codebase
-git pull origin production
+git pull
 
 echo "docker-compose up -d --build"
 docker-compose up -d --build
