@@ -4,7 +4,7 @@ set -e
 git push
 
 git checkout production
-git merge main
+git merge --no-ff main
 
 #npm build for production
 npm run prod
