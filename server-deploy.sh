@@ -12,7 +12,7 @@ git fetch origin production
 git reset --hard origin/production
 
 echo "docker-compose up -d --build"
-docker-compose up -d --build
+docker-compose up -d --build --remove-orphans
 
 # Install dependencies based on composer.lock file
 echo "docker-compose exec app composer install --no-interaction --prefer-dist --optimize-autoloader --ignore-platform-reqs"
