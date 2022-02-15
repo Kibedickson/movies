@@ -145,17 +145,11 @@ var _hoisted_9 = {
   "class": "md:ml-6 mt-3 md:mt-0"
 };
 var _hoisted_10 = ["href"];
-
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", {
+var _hoisted_11 = {
   "class": "md:ml-6 mt-3 md:mt-0"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "hover:text-gray-300"
-}, "Actors")], -1
-/* HOISTED */
-);
-
-var _hoisted_12 = {
+};
+var _hoisted_12 = ["href"];
+var _hoisted_13 = {
   "class": "flex flex-col md:flex-row items-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -175,7 +169,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "hover:text-gray-300"
   }, "TV Shows", 8
   /* PROPS */
-  , _hoisted_10)]), _hoisted_11]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search)])])]);
+  , _hoisted_10)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: _ctx.route('actors.index'),
+    "class": "hover:text-gray-300"
+  }, "Actors", 8
+  /* PROPS */
+  , _hoisted_12)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search)])])]);
 }
 
 /***/ }),
