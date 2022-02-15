@@ -25,7 +25,7 @@
       <ul v-if="results.length > 0">
         <li v-for="(result, index) in results" :key="index" class="border-b border-gray-700">
           <a
-              :href="route('movies.show', result.id)"
+              :href="result.title ? route('movies.show', result.id) : route('tvs.show', result.id)"
               class="block hover:bg-gray-700 px-3 py-3 flex items-center transition ease-in-out duration-150"
           >
             <img v-if="result.poster_path" :src="`https://image.tmdb.org/t/p/w92/${ result.poster_path }`"

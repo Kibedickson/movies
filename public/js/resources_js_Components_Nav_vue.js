@@ -255,7 +255,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       key: index,
       "class": "border-b border-gray-700"
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: _ctx.route('movies.show', result.id),
+      href: result.title ? _ctx.route('movies.show', result.id) : _ctx.route('tvs.show', result.id),
       "class": "block hover:bg-gray-700 px-3 py-3 flex items-center transition ease-in-out duration-150"
     }, [result.poster_path ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("img", {
       key: 0,
