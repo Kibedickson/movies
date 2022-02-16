@@ -12,7 +12,7 @@ git push
 
 git checkout production
 
-git merge main
+git merge main -m "Merged main into production"
 
 git push origin production
 
