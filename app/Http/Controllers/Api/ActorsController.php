@@ -9,7 +9,7 @@ use App\Services\ActorService;
 
 class ActorsController extends Controller
 {
-    public function index($page = 1)
+    public function index($page = 1): array
     {
         abort_if($page > 500, 204);
 
@@ -22,10 +22,15 @@ class ActorsController extends Controller
         ];
     }
 
-    public function show($id)
+    public function show($id): array
     {
-        [$actor, $social, $credits] = FetchActorAction::execute($id);
+        $actor = FetchActorAction::execute($id);
 
-
+        return [
+            'actor' => ActorService::formatActor($actor['actor']),
+            'social' => ActorService::formatSocial($actor['social']),
+            'knownForMovies' => ActorService::knownForMovies($actor['credits']),
+            'credits' => ActorService::formatCredits($actor['credits']),
+        ];
     }
 }
